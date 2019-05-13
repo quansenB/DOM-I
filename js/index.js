@@ -84,5 +84,17 @@ pcontact[0].textContent = siteContent["contact"]["address"];
 pcontact[1].textContent = siteContent["contact"]["phone"];
 pcontact[2].textContent = siteContent["contact"]["email"];
 
-let footertext =document.querySelector("footer p");
-footertext.textContent= siteContent["footer"]["copyright"];
+let footertext = document.querySelector("footer p");
+footertext.textContent = siteContent["footer"]["copyright"];
+
+let newanav1 = document.createElement("a");
+newanav1.textContent = "Home";
+document.querySelector("nav").prepend(newanav1);
+let newanav2 = document.createElement("a");
+newanav2.textContent = "Imprint";
+document.querySelector("nav").appendChild(newanav2);
+
+let navItemsGreen = document.querySelectorAll('a');
+navItemsGreen.forEach((element) => {
+  element.style.color = "green";
+});
